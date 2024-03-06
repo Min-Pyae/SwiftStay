@@ -16,6 +16,7 @@
 		F11BCF2B2B97F2C5006075E6 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF2A2B97F2C5006075E6 /* SearchAndFilterBar.swift */; };
 		F11BCF2D2B97F6C8006075E6 /* ExploreDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF2C2B97F6C8006075E6 /* ExploreDetailsView.swift */; };
 		F1557AF42B9859E000042257 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1557AF32B9859E000042257 /* ImageCarouselView.swift */; };
+		F1557AF62B98705900042257 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1557AF52B98705900042257 /* DestinationSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F11BCF2A2B97F2C5006075E6 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 		F11BCF2C2B97F6C8006075E6 /* ExploreDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDetailsView.swift; sourceTree = "<group>"; };
 		F1557AF32B9859E000042257 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
+		F1557AF52B98705900042257 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				F11BCF282B97EFC2006075E6 /* ExploreItemView.swift */,
 				F11BCF2A2B97F2C5006075E6 /* SearchAndFilterBar.swift */,
 				F11BCF2C2B97F6C8006075E6 /* ExploreDetailsView.swift */,
+				F1557AF52B98705900042257 /* DestinationSearchView.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11BCF152B97ECD0006075E6 /* ContentView.swift in Sources */,
+				F1557AF62B98705900042257 /* DestinationSearchView.swift in Sources */,
 				F11BCF292B97EFC2006075E6 /* ExploreItemView.swift in Sources */,
 				F11BCF272B97EF11006075E6 /* ExploreView.swift in Sources */,
 				F11BCF2D2B97F6C8006075E6 /* ExploreDetailsView.swift in Sources */,
