@@ -13,6 +13,7 @@
 		F11BCF1A2B97ECD1006075E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11BCF192B97ECD1006075E6 /* Preview Assets.xcassets */; };
 		F11BCF272B97EF11006075E6 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF262B97EF11006075E6 /* ExploreView.swift */; };
 		F11BCF292B97EFC2006075E6 /* ExploreItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF282B97EFC2006075E6 /* ExploreItemView.swift */; };
+		F11BCF2B2B97F2C5006075E6 /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF2A2B97F2C5006075E6 /* SearchAndFilterBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		F11BCF192B97ECD1006075E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F11BCF262B97EF11006075E6 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		F11BCF282B97EFC2006075E6 /* ExploreItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItemView.swift; sourceTree = "<group>"; };
+		F11BCF2A2B97F2C5006075E6 /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				F11BCF262B97EF11006075E6 /* ExploreView.swift */,
 				F11BCF282B97EFC2006075E6 /* ExploreItemView.swift */,
+				F11BCF2A2B97F2C5006075E6 /* SearchAndFilterBar.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				F11BCF152B97ECD0006075E6 /* ContentView.swift in Sources */,
 				F11BCF292B97EFC2006075E6 /* ExploreItemView.swift in Sources */,
 				F11BCF272B97EF11006075E6 /* ExploreView.swift in Sources */,
+				F11BCF2B2B97F2C5006075E6 /* SearchAndFilterBar.swift in Sources */,
 				F11BCF132B97ECD0006075E6 /* SwiftStayApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

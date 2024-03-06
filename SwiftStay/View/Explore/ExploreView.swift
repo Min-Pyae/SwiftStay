@@ -10,13 +10,18 @@ import SwiftUI
 struct ExploreView: View {
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVStack(spacing: 30) {
-                    ForEach(1...10, id: \.self) { _ in
-                        ExploreItemView()
+            VStack {
+                
+                SearchAndFilterBar()
+                
+                ScrollView {
+                    LazyVStack(spacing: 30) {
+                        ForEach(1...10, id: \.self) { _ in
+                            ExploreItemView()
+                        }
                     }
+                    .padding()
                 }
-                .padding()
             }
         }
     }
