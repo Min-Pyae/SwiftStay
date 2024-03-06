@@ -12,14 +12,9 @@ struct ExploreItemView: View {
         VStack(spacing: 8) {
             
             // IMAGES
-            TabView {
-                ForEach(0...3, id: \.self) { image in
-                    Rectangle()
-                }
-            }
-            .frame(height: 400)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .tabViewStyle(.page)
+            ImageCarouselView()
+                .frame(height: 400)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             
             // INFORMATION
             HStack(alignment: .top) {
@@ -27,6 +22,7 @@ struct ExploreItemView: View {
                 // DETAILS
                 VStack(alignment: .leading) {
                     Text("Miami, Florida")
+                        .foregroundStyle(.black)
                     
                     Text("12 mi away")
                         .foregroundStyle(.gray)
@@ -39,6 +35,7 @@ struct ExploreItemView: View {
                         Text("$567")
                         Text("night")
                     }
+                    .foregroundStyle(.black)
                 }
                 
                 Spacer()
@@ -49,6 +46,7 @@ struct ExploreItemView: View {
                     
                     Text("4.6")
                 }
+                .foregroundStyle(.black)
             }
             .font(.footnote)
         }

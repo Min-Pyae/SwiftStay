@@ -12,16 +12,23 @@ struct ExploreView: View {
         NavigationStack {
             VStack {
                 
+                // SEARCH AND FILTER BAR
                 SearchAndFilterBar()
                 
+                // EXPLORE LIST
                 ScrollView {
                     LazyVStack(spacing: 30) {
-                        ForEach(1...10, id: \.self) { _ in
-                            ExploreItemView()
+                        ForEach(1...10, id: \.self) { list in
+                            NavigationLink(value: list) {
+                                ExploreItemView()
+                            }
                         }
                     }
-                    .padding()
                 }
+            }
+            .navigationDestination(for: Int.self) { list in
+                ExploreDetailsView()
+                    .navigationBarBackButtonHidden()
             }
         }
     }
