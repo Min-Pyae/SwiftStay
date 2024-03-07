@@ -25,18 +25,10 @@ struct ProfileView: View {
                 
                 
                 // LOG IN BUTTON
-                Button(action: {
-                    
-                }, label: {
-                    Text("Log In")
-                        .font(.subheadline)
-                        .fontWeight(.bold)
-                        .foregroundStyle(.white)
-                        .frame(width: 360, height: 48)
-                        .background(.purple)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
-                })
+                LogInButton()
                 
+                
+                // SIGN UP
                 HStack() {
                     Text("Don't have an account?")
                     

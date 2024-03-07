@@ -12,7 +12,7 @@ struct ImageCarouselView: View {
         TabView {
             ForEach(0...3, id: \.self) { image in
                 Rectangle()
-                    .foregroundStyle(.cyan)
+                    .foregroundStyle(.purple)
             }
         }
         .tabViewStyle(.page)

@@ -19,6 +19,12 @@
 		F1557AF62B98705900042257 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1557AF52B98705900042257 /* DestinationSearchView.swift */; };
 		F1CBE0DB2B99C820000B1275 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0DA2B99C820000B1275 /* ProfileView.swift */; };
 		F1CBE0DD2B99C9F7000B1275 /* ProfileOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0DC2B99C9F7000B1275 /* ProfileOptionRowView.swift */; };
+		F1CBE0E02B99CB79000B1275 /* WishListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0DF2B99CB79000B1275 /* WishListsView.swift */; };
+		F1CBE0E22B99CC3F000B1275 /* LogInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0E12B99CC3F000B1275 /* LogInButton.swift */; };
+		F1CBE0E42B99ECD8000B1275 /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0E32B99ECD8000B1275 /* Rental.swift */; };
+		F1CBE0E62B9A10DB000B1275 /* RentalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0E52B9A10DB000B1275 /* RentalData.swift */; };
+		F1CBE0E82B9A1277000B1275 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0E72B9A1277000B1275 /* ExploreViewModel.swift */; };
+		F1CBE0EB2B9A12FA000B1275 /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0EA2B9A12FA000B1275 /* ExploreService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		F1557AF52B98705900042257 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 		F1CBE0DA2B99C820000B1275 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F1CBE0DC2B99C9F7000B1275 /* ProfileOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionRowView.swift; sourceTree = "<group>"; };
+		F1CBE0DF2B99CB79000B1275 /* WishListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListsView.swift; sourceTree = "<group>"; };
+		F1CBE0E12B99CC3F000B1275 /* LogInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInButton.swift; sourceTree = "<group>"; };
+		F1CBE0E32B99ECD8000B1275 /* Rental.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
+		F1CBE0E52B9A10DB000B1275 /* RentalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalData.swift; sourceTree = "<group>"; };
+		F1CBE0E72B9A1277000B1275 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		F1CBE0EA2B9A12FA000B1275 /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 		F11BCF112B97ECD0006075E6 /* SwiftStay */ = {
 			isa = PBXGroup;
 			children = (
+				F1CBE0E92B9A12EC000B1275 /* Service */,
 				F11BCF2E2B97F6EC006075E6 /* Components */,
 				F11BCF242B97EEE2006075E6 /* View */,
 				F11BCF222B97EECF006075E6 /* Model */,
@@ -90,6 +103,8 @@
 		F11BCF222B97EECF006075E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F1CBE0E32B99ECD8000B1275 /* Rental.swift */,
+				F1CBE0E52B9A10DB000B1275 /* RentalData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +112,7 @@
 		F11BCF232B97EED7006075E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F1CBE0E72B9A1277000B1275 /* ExploreViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -105,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F11BCF252B97EEF5006075E6 /* Explore */,
+				F1CBE0DE2B99CB5F000B1275 /* WishLists */,
 				F1CBE0D92B99C7D6000B1275 /* Profile */,
 			);
 			path = View;
@@ -126,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				F1557AF32B9859E000042257 /* ImageCarouselView.swift */,
+				F1CBE0E12B99CC3F000B1275 /* LogInButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -137,6 +155,22 @@
 				F1CBE0DC2B99C9F7000B1275 /* ProfileOptionRowView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F1CBE0DE2B99CB5F000B1275 /* WishLists */ = {
+			isa = PBXGroup;
+			children = (
+				F1CBE0DF2B99CB79000B1275 /* WishListsView.swift */,
+			);
+			path = WishLists;
+			sourceTree = "<group>";
+		};
+		F1CBE0E92B9A12EC000B1275 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F1CBE0EA2B9A12FA000B1275 /* ExploreService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,11 +248,17 @@
 				F1CBE0DD2B99C9F7000B1275 /* ProfileOptionRowView.swift in Sources */,
 				F1557AF62B98705900042257 /* DestinationSearchView.swift in Sources */,
 				F11BCF292B97EFC2006075E6 /* ExploreItemView.swift in Sources */,
+				F1CBE0E62B9A10DB000B1275 /* RentalData.swift in Sources */,
+				F1CBE0E82B9A1277000B1275 /* ExploreViewModel.swift in Sources */,
+				F1CBE0E22B99CC3F000B1275 /* LogInButton.swift in Sources */,
 				F11BCF272B97EF11006075E6 /* ExploreView.swift in Sources */,
+				F1CBE0E02B99CB79000B1275 /* WishListsView.swift in Sources */,
 				F11BCF2D2B97F6C8006075E6 /* ExploreDetailsView.swift in Sources */,
 				F11BCF2B2B97F2C5006075E6 /* SearchAndFilterBar.swift in Sources */,
 				F1557AF42B9859E000042257 /* ImageCarouselView.swift in Sources */,
+				F1CBE0E42B99ECD8000B1275 /* Rental.swift in Sources */,
 				F11BCF132B97ECD0006075E6 /* SwiftStayApp.swift in Sources */,
+				F1CBE0EB2B9A12FA000B1275 /* ExploreService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

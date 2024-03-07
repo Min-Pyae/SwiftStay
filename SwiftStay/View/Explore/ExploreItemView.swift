@@ -50,7 +50,7 @@ struct ExploreItemView: View {
             }
             .font(.footnote)
         }
-        .padding()
+        .padding(.horizontal)
     }
 }
 

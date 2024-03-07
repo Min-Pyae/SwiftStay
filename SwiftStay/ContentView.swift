@@ -9,7 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ExploreView()
+        TabView {
+            
+            // EXPLORE VIEW
+            ExploreView()
+                .tabItem {
+                    Label("Explore", systemImage: "magnifyingglass")
+                }
+            
+            
+            // WISHLISTS VIEW
+            WishListsView()
+                .tabItem {
+                    Label("Explore", systemImage: "heart.fill")
+                }
+            
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle.fill")
+                }
+        }
     }
 }
 
