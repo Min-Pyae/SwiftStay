@@ -11,12 +11,31 @@ import MapKit
 struct ExploreDetailsView: View {
     
     @Environment(\.dismiss) var dismiss
+    @State private var position: MapCameraPosition
+    let rental: Rental
+    
+    init(rental: Rental) {
+        self.rental = rental
+        
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(
+                latitude: rental.latitude,
+                longitude: rental.longitude
+            ),
+            span: MKCoordinateSpan(
+                latitudeDelta: 0.1,
+                longitudeDelta: 0.1
+            )
+        )
+        
+        self._position = State(initialValue: .region(region))
+    }
     
     var body: some View {
         ScrollView {
             
             ZStack(alignment: .topLeading) {
-                ImageCarouselView()
+                ImageCarouselView(rental: rental)
                     .frame(height: 400)
                 
                 Button(action: {
@@ -34,16 +53,16 @@ struct ExploreDetailsView: View {
             }
             
             
-            VStack(alignment: .leading, spacing: 6) {
+            VStack(alignment: .leading, spacing: 10) {
                 
-                Text("Miami Villa")
-                    .font(.title)
+                Text(rental.title)
+                    .font(.title2)
                     .fontWeight(.bold)
                 
                 HStack() {
                     Image(systemName: "star.fill")
                     
-                    Text(" 4.86 ")
+                    Text("\(rental.rating)")
                     
                     Text(" - ")
                     
@@ -53,7 +72,7 @@ struct ExploreDetailsView: View {
                 }
                 .font(.footnote)
                 
-                Text("Miami, Florida")
+                Text("\(rental.city), \(rental.state)")
                     .font(.footnote)
             }
             .padding()
@@ -64,18 +83,18 @@ struct ExploreDetailsView: View {
             // HOST INFO VIEW
             HStack {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("Entire villa hosted by ")
+                    Text("Entire villa hosted by")
                         .font(.headline)
                     
-                    Text("John Smith")
+                    Text(rental.owenerName)
                         .font(.headline)
                         .padding(.bottom, 3)
                     
                     HStack {
-                        Text("4 guests - ")
-                        Text("4 bedrooms - ")
-                        Text("4 beds - ")
-                        Text("4 baths")
+                        Text("\(rental.numberOfGuests) guests - ")
+                        Text("\(rental.numberOfBedrooms) bedrooms - ")
+                        Text("\(rental.numberOfBeds) beds - ")
+                        Text("\(rental.numberOfBathrooms) baths")
                     }
                     .font(.caption2)
                 }
@@ -93,16 +112,16 @@ struct ExploreDetailsView: View {
             
             // FEATURES
             VStack(alignment: .leading, spacing: 16) {
-                ForEach(1 ..< 3) { feature in
+                ForEach(rental.features) { feature in
                     HStack(spacing: 12) {
-                        Image(systemName: "medal")
+                        Image(systemName: feature.imageName)
                         
                         VStack(alignment: .leading) {
-                            Text("Superhost")
+                            Text(feature.title)
                                 .font(.footnote)
                                 .fontWeight(.semibold)
                             
-                            Text("Superhost are experienced, highly rated hosts who are commited to providing great stars for guests,")
+                            Text(feature.subTitle)
                                 .font(.caption)
                         }
                         
@@ -117,8 +136,8 @@ struct ExploreDetailsView: View {
             // BEDROOM VIEW
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 32) {
-                    ForEach(1 ..< 5) { bedroom in
-            
+                    ForEach(1 ... rental.numberOfBedrooms, id: \.self) { bedroom in
+                        
                         VStack(alignment: .leading, spacing: 5) {
                             
                             Image(systemName: "bed.double")
@@ -146,12 +165,12 @@ struct ExploreDetailsView: View {
                 Text("What this place offers")
                     .font(.headline)
                 
-                ForEach(1 ..< 5) { facility in
+                ForEach(rental.facilities) { facility in
                     HStack {
-                        Image(systemName: "wifi")
+                        Image(systemName: facility.imageName)
                             .frame(width: 32)
                         
-                        Text("Wifi")
+                        Text(facility.title)
                             .font(.footnote)
                         
                         Spacer()
@@ -167,7 +186,7 @@ struct ExploreDetailsView: View {
                 Text("Where you will be")
                     .font(.headline)
                 
-                Map()
+                Map(position: $position)
                     .frame(height: 200)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
@@ -185,7 +204,7 @@ struct ExploreDetailsView: View {
                 HStack {
                     
                     VStack(alignment: .leading) {
-                        Text("$500")
+                        Text("$\(rental.pricePerNight)")
                             .font(.subheadline)
                             .fontWeight(.semibold)
                         
@@ -212,7 +231,7 @@ struct ExploreDetailsView: View {
                             .background(Color(.purple))
                             .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
-
+                    
                 }
                 .padding(.horizontal, 30)
             }
@@ -222,5 +241,5 @@ struct ExploreDetailsView: View {
 }
 
 #Preview {
-    ExploreDetailsView()
+    ExploreDetailsView(rental: RentalData.rentals[0])
 }

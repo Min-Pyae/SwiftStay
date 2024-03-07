@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ExploreItemView: View {
+    
+    let rental: Rental
+    
     var body: some View {
         VStack(spacing: 8) {
             
             // IMAGES
-            ImageCarouselView()
+            ImageCarouselView(rental: rental)
                 .frame(height: 400)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             
@@ -21,8 +24,9 @@ struct ExploreItemView: View {
                 
                 // DETAILS
                 VStack(alignment: .leading) {
-                    Text("Miami, Florida")
+                    Text("\(rental.city), \(rental.state)")
                         .foregroundStyle(.black)
+                        .fontWeight(.bold)
                     
                     Text("12 mi away")
                         .foregroundStyle(.gray)
@@ -32,11 +36,12 @@ struct ExploreItemView: View {
                     
                     // PRICE
                     HStack {
-                        Text("$567")
+                        Text("$\(rental.pricePerNight)")
                         Text("night")
                     }
                     .foregroundStyle(.black)
                 }
+                .fontWeight(.semibold)
                 
                 Spacer()
                 
@@ -44,7 +49,7 @@ struct ExploreItemView: View {
                 HStack(spacing: 5) {
                     Image(systemName: "star.fill")
                     
-                    Text("4.6")
+                    Text("\(rental.rating)")
                 }
                 .foregroundStyle(.black)
             }
@@ -55,5 +60,5 @@ struct ExploreItemView: View {
 }
 
 #Preview {
-    ExploreItemView()
+    ExploreItemView(rental: RentalData.rentals[0])
 }
