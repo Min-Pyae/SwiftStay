@@ -17,11 +17,14 @@ struct CollapsedPickerView: View {
         VStack(alignment: .leading) {
             
             HStack() {
+                
+                // TITLE
                 Text(title)
                     .foregroundStyle(.gray)
                 
                 Spacer()
                 
+                // DESCRIPTION
                 Text(description)
             }
             .fontWeight(.semibold)

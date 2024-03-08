@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegistrationView: View {
+    
     @State var email: String = ""
     @State var password: String = ""
     
@@ -45,7 +46,6 @@ struct RegistrationView: View {
                 
             }
             
-            
             // SIGN IN BUTTON
             AuthenticationButton(buttonTitle: "Sign Up")
             
@@ -54,6 +54,7 @@ struct RegistrationView: View {
         }
         .padding(.horizontal, 30)
         .padding(.top, 20)
+        
     }
     
 }

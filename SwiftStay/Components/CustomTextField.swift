@@ -15,12 +15,14 @@ struct CustomTextField: View {
     @Binding var text: String
     
     var body: some View {
+        
         VStack {
+            
             HStack (spacing: 20) {
                 
                 // IMAGE
                 Image(systemName: image)
-                    .frame(width:20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width:20, height: 20, alignment: .center)
                 
                 // TEXT FIELD
                 if isSureField {
@@ -33,11 +35,13 @@ struct CustomTextField: View {
             .padding(.bottom, 10)
             
             Divider()
+            
         }
         .padding(.horizontal, 10)
+        
     }
 }
 
 //#Preview {
-//    CustomTextField(image: <#String#>, placeholderText: <#String#>, isSureField: <#Bool#>, text: <#Binding<String>#>)
+//    CustomTextField(image: "envelope", placeholderText: "Enter your email", isSureField: false, text: $email)
 //}

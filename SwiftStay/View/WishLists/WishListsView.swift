@@ -14,9 +14,10 @@ struct WishListsView: View {
             
             VStack(alignment: .leading, spacing: 32) {
                 
+                // SIGN IN TEXT
                 VStack(alignment: .leading, spacing: 8) {
                     
-                    Text("Log in to view your wishlists")
+                    Text("Sign in to view your wishlists")
                         .font(.headline)
                     
                     Text("You can create, view or edit wishlist once you've logged in")
@@ -25,7 +26,7 @@ struct WishListsView: View {
                 }
                 .padding()
                 
-                // LOG IN BUTTON
+                // SIGN IN BUTTON
                 AuthenticationButton(buttonTitle: "Sign In")
                 
                 Spacer()

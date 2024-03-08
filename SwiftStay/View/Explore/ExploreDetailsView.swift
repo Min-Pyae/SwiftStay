@@ -14,6 +14,7 @@ struct ExploreDetailsView: View {
     
     let rental: Rental
     
+    
     init(rental: Rental) {
         self.rental = rental
         
@@ -31,23 +32,31 @@ struct ExploreDetailsView: View {
         self._position = State(initialValue: .region(region))
     }
     
+    
     var body: some View {
+        
         ScrollView {
             
             ZStack(alignment: .topLeading) {
+                
+                // IMAGE CAROUSEL VIEW
                 ImageCarouselView(rental: rental)
                     .frame(height: 400)
                 
+                // DISMISS BUTTON
                 DismissButton()
+                
             }
             
             
             VStack(alignment: .leading, spacing: 10) {
                 
+                // RENTAL TITLE
                 Text(rental.title)
                     .font(.title2)
                     .fontWeight(.bold)
                 
+                // RATING AND REVIEWS
                 HStack() {
                     Image(systemName: "star.fill")
                     
@@ -61,8 +70,10 @@ struct ExploreDetailsView: View {
                 }
                 .font(.footnote)
                 
+                // LOCATION
                 Text("\(rental.city), \(rental.state)")
                     .font(.footnote)
+                
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -192,6 +203,7 @@ struct ExploreDetailsView: View {
                 
                 HStack {
                     
+                    // PRICE
                     VStack(alignment: .leading) {
                         Text("$\(String(format: "%.2f", rental.pricePerNight))")
                             .font(.subheadline)
@@ -226,6 +238,7 @@ struct ExploreDetailsView: View {
             }
             .background(Color("ReserveBackground"))
         }
+        
     }
 }
 

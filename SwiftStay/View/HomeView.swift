@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var body: some View {
         
         TabView {
@@ -17,7 +18,6 @@ struct HomeView: View {
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
                 }
-            
             
             // WISHLISTS VIEW
             WishListsView()
@@ -32,7 +32,9 @@ struct HomeView: View {
                 }
         }
         .tint(.purple)
+        
     }
+    
 }
 
 #Preview {

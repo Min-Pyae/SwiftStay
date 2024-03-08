@@ -29,11 +29,8 @@ struct Rental: Identifiable, Codable, Hashable {
     
     // LOCATION
     let latitude, longitude: Double
-    let street: String
     let city: String
     let state: String
-    let zipCode: Int
-
     
     // RENTAL FEATURES
     var features: [RentalFeature]
@@ -43,6 +40,7 @@ struct Rental: Identifiable, Codable, Hashable {
 }
 
 
+// RENTAL FEATURE
 enum RentalFeature: Int, Codable, Identifiable, Hashable {
     case selfCheckin
     case superHost
@@ -74,6 +72,7 @@ enum RentalFeature: Int, Codable, Identifiable, Hashable {
 }
 
 
+// RENTAL FACILITY
 enum RentalFacility: Int, Codable, Identifiable, Hashable {
     case pool
     case kitchen
@@ -116,6 +115,7 @@ enum RentalFacility: Int, Codable, Identifiable, Hashable {
 }
 
 
+// RENTAL TYPE
 enum RentalType: Int, Codable, Identifiable, Hashable {
     case apartment
     case house

@@ -13,11 +13,15 @@ struct ProfileOptionRowView: View {
     var title: String
     
     var body: some View {
+        
         VStack {
             
             HStack {
+                
+                // OPTION IMAGE NAME
                 Image(systemName: imageName)
                 
+                // OPTION TITLE
                 Text(title)
                     .font(.subheadline)
                 
@@ -27,7 +31,9 @@ struct ProfileOptionRowView: View {
             }
             
             Divider()
+            
         }
+        
     }
 }
 

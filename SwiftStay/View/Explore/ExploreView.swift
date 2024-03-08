@@ -13,11 +13,19 @@ struct ExploreView: View {
     @StateObject var viewModel = ExploreViewModel(service: ExploreService())
     
     var body: some View {
+        
         NavigationStack {
+            
             VStack {
+                
+                // CHECKING IF SEARCH AND FILTER BAR IS PRESSED
                 if showDestinationSearchView {
+                    
+                    // DESTINATION SEARCH VIEW
                     DestinationSearchView(show: $showDestinationSearchView, viewModel: viewModel)
+                    
                 } else {
+                    
                     // SEARCH AND FILTER BAR
                     SearchAndFilterBar(location: viewModel.searchLocation)
                         .onTapGesture {
@@ -26,7 +34,7 @@ struct ExploreView: View {
                             }
                         }
                     
-                    // EXPLORE LIST
+                    // EXPLORE LISTS
                     ScrollView {
                         LazyVStack(spacing: 30) {
                             ForEach(viewModel.rentals) { rental in
@@ -36,13 +44,16 @@ struct ExploreView: View {
                             }
                         }
                     }
+                    
                 }
             }
             .navigationDestination(for: Rental.self) { rental in
                 ExploreDetailsView(rental: rental)
                     .navigationBarBackButtonHidden()
             }
+            
         }
+        
     }
 }
 

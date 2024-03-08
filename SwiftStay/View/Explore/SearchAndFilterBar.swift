@@ -12,9 +12,13 @@ struct SearchAndFilterBar: View {
     var location: String
     
     var body: some View {
+        
         HStack {
+            
+            // SEARCH BAR IMAGE
             Image(systemName: "magnifyingglass")
             
+            // SEARCH BAR PLACEHOLDER TEXTS
             VStack(alignment: .leading, spacing: 3) {
                 Text(location.isEmpty ? "Where to?": location)
                     .font(.footnote)
@@ -26,12 +30,14 @@ struct SearchAndFilterBar: View {
             
             Spacer()
             
+            // FILTER BUTTON
             Button(action: {
                 
             }, label: {
                 Image(systemName: "line.3.horizontal.decrease.circle")
                     .foregroundStyle(.black)
             })
+            
         }
         .padding()
         .overlay {
@@ -41,6 +47,7 @@ struct SearchAndFilterBar: View {
                 .shadow(color: .black.opacity(0.5), radius: 2)
         }
         .padding(.horizontal)
+        
     }
 }
 

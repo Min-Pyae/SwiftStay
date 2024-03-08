@@ -13,7 +13,9 @@ class ExploreViewModel: ObservableObject {
     @Published var searchLocation = ""
     
     private let service: ExploreService
-    private var allRentals = [Rental]() // UNFILTERED RENTALS
+    
+    // UNFILTERED RENTALS
+    private var allRentals = [Rental]()
     
     
     init(service: ExploreService) {

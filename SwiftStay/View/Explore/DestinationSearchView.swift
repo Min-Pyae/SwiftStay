@@ -23,12 +23,14 @@ struct DestinationSearchView: View {
     @State private var selectedOption: DestinationSearchOption = .destination
     @State private var startDate = Date()
     @State private var endDate = Date()
-    @State private var guestsNumber = 0
+    @State private var guestsNumber = 1
     
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 30) {
             
             HStack {
+                
                 // DISMISS BUTTON
                 Button(action: {
                     withAnimation(.snappy) {
@@ -52,6 +54,7 @@ struct DestinationSearchView: View {
                     .font(.subheadline)
                     .fontWeight(.semibold)
                 }
+                
             }
             
             
@@ -92,7 +95,6 @@ struct DestinationSearchView: View {
                     selectedOption = .destination
                 }
             }
-            
             
             
             // DATE SELECTION VIEW
@@ -163,15 +165,15 @@ struct DestinationSearchView: View {
              
             
             Spacer()
+            
         }
         .padding()
+        
     }
 }
 
-#Preview {
-    DestinationSearchView(show: .constant(false), viewModel: ExploreViewModel(service: ExploreService()))
-}
 
+// COLLAPSABLE VIEW MODIFIER
 struct CollapsableViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -182,4 +184,8 @@ struct CollapsableViewModifier: ViewModifier {
     }
 }
 
+
+#Preview {
+    DestinationSearchView(show: .constant(false), viewModel: ExploreViewModel(service: ExploreService()))
+}
 

@@ -12,14 +12,18 @@ struct ImageCarouselView: View {
     let rental: Rental
     
     var body: some View {
+        
         TabView {
+            
             ForEach(rental.images, id: \.self) { image in
                 Image(image)
                     .resizable()
                     .scaledToFill()
             }
+            
         }
         .tabViewStyle(.page)
+        
     }
 }
 

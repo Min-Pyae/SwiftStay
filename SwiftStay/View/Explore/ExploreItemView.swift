@@ -12,6 +12,7 @@ struct ExploreItemView: View {
     let rental: Rental
     
     var body: some View {
+        
         VStack(spacing: 8) {
             
             // IMAGES
@@ -19,7 +20,7 @@ struct ExploreItemView: View {
                 .frame(height: 400)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             
-            // INFORMATION
+            // RENTAL INFORMATION
             HStack(alignment: .top) {
                 
                 // DETAILS
@@ -40,10 +41,13 @@ struct ExploreItemView: View {
                         Text("night")
                     }
                     .foregroundStyle(Color("ExploreItemViewText"))
+                    
                 }
                 .fontWeight(.semibold)
                 
+                
                 Spacer()
+                
                 
                 // RATING
                 HStack(spacing: 5) {
@@ -52,8 +56,10 @@ struct ExploreItemView: View {
                     Text("\(String(format: "%.1f", rental.rating))")
                 }
                 .foregroundStyle(.black)
+                
             }
             .font(.footnote)
+            
         }
         .padding(.horizontal)
     }

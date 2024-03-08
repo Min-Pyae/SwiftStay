@@ -9,7 +9,9 @@ import Foundation
 
 
 class RentalData {
+    
     static var rentals: [Rental] = [
+        
         Rental(
             id: NSUUID().uuidString,
             ownerID: NSUUID().uuidString,
@@ -33,13 +35,12 @@ class RentalData {
             pricePerNight: 100,
             latitude: 37.7749,
             longitude: -122.4194,
-            street: "123 Main St",
             city: "San Francisco",
             state: "CA",
-            zipCode: 94105,
             features: [.selfCheckin, .superHost],
             facilities: [.wifi, .kitchen, .tv, .laundry, .alarmSystem]
         ),
+        
         Rental(
             id: NSUUID().uuidString,
             ownerID: NSUUID().uuidString,
@@ -62,13 +63,12 @@ class RentalData {
             pricePerNight: 150,
             latitude: 34.0522,
             longitude: -118.2437,
-            street: "456 Oak St",
             city: "Los Angeles",
             state: "CA",
-            zipCode: 90012,
             features: [.superHost],
             facilities: [.pool, .kitchen, .wifi, .tv, .laundry]
         ),
+        
         Rental(
             id: NSUUID().uuidString,
             ownerID: NSUUID().uuidString,
@@ -92,13 +92,12 @@ class RentalData {
             pricePerNight: 120,
             latitude: 40.7128,
             longitude: -74.0060,
-            street: "789 Elm St",
             city: "New York",
             state: "NY",
-            zipCode: 10001,
             features: [.selfCheckin],
             facilities: [.wifi, .office, .balcony, .kitchen, .alarmSystem]
         ),
+        
         Rental(
             id: NSUUID().uuidString,
             ownerID: NSUUID().uuidString,
@@ -122,13 +121,12 @@ class RentalData {
             pricePerNight: 300,
             latitude: 33.6844,
             longitude: -117.8265,
-            street: "101 Palm Ave",
             city: "Newport Beach",
             state: "CA",
-            zipCode: 92660,
             features: [.superHost],
             facilities: [.pool, .kitchen, .wifi, .tv, .alarmSystem]
         ),
+        
         Rental(
             id: NSUUID().uuidString,
             ownerID: NSUUID().uuidString,
@@ -150,13 +148,12 @@ class RentalData {
             pricePerNight: 130,
             latitude: 41.8781,
             longitude: -87.6298,
-            street: "456 Maple St",
             city: "Chicago",
             state: "IL",
-            zipCode: 60601,
             features: [.selfCheckin],
             facilities: [.kitchen, .wifi, .tv, .laundry]
         ),
+        
         Rental(
             id: NSUUID().uuidString,
             ownerID: NSUUID().uuidString,
@@ -179,13 +176,12 @@ class RentalData {
             pricePerNight: 90,
             latitude: 37.3382,
             longitude: -121.8863,
-            street: "789 Oak St",
             city: "San Jose",
             state: "CA",
-            zipCode: 95112,
             features: [.superHost],
             facilities: [.wifi, .kitchen, .tv]
         ),
+        
         Rental(
             id: NSUUID().uuidString,
             ownerID: NSUUID().uuidString,
@@ -208,12 +204,11 @@ class RentalData {
             pricePerNight: 180,
             latitude: 39.5501,
             longitude: -105.7821,
-            street: "234 Pine St",
             city: "Denver",
             state: "CO",
-            zipCode: 80202,
             features: [.selfCheckin, .superHost],
             facilities: [.kitchen, .wifi, .tv, .laundry, .balcony]
         )
     ]
+    
 }

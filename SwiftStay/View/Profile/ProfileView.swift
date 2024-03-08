@@ -15,19 +15,20 @@ struct ProfileView: View {
         
         NavigationStack {
             
-            // PROFILE LOG IN VIEW
+            // PROFILE SIGN IN VIEW
             VStack(alignment: .leading, spacing: 32) {
                 
+                // PROFILE TEXT
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Profile")
                         .font(.largeTitle)
                         .fontWeight(.semibold)
                     
-                    Text("Log in to start planning your next trip.")
+                    Text("Sign in to start planning your next trip.")
                 }
                 
                 
-                // LOG IN BUTTON
+                // SIGN IN BUTTON
                 AuthenticationButton(buttonTitle: "Sign In")
                 
                 
@@ -47,7 +48,9 @@ struct ProfileView: View {
                 
             }
             
+            
             Spacer()
+            
             
             // PROFILE OPTIONS
             VStack(spacing: 24) {
@@ -87,9 +90,11 @@ struct ProfileView: View {
                 }
                 
             })
+            
         }
         .tint(.purple)
         .padding()
+        
     }
     
 }

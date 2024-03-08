@@ -17,8 +17,6 @@ struct LoginView: View {
             
             VStack {
                 
-                //DismissButton()
-                
                 VStack (alignment: .leading, spacing: 20) {
                     
                     // WELCOME TEXTS
@@ -33,7 +31,7 @@ struct LoginView: View {
                         .padding(.bottom, 20)
                     
                     
-                    // LOGIN FORM
+                    // SIGN IN FORM
                     VStack(spacing: 30) {
                         CustomTextField(image: "envelope", placeholderText: "Enter your email", isSureField: false, text: $email)
                         
@@ -41,6 +39,7 @@ struct LoginView: View {
                     }
                     
                 }
+                
                 
                 // FORGOT PASSWORD BUTTON
                 NavigationLink(destination: Text("We're still working on it...")) {
@@ -59,9 +58,11 @@ struct LoginView: View {
                 
                 
                 // SIGN IN BUTTON
-               // AuthenticationButton(buttonTitle: "Sign In")
+                AuthenticationButton(buttonTitle: "Sign In")
+                
                 
                 Spacer()
+                
                 
                 // SIGN UP REGISRTATION
                 NavigationLink(destination: RegistrationView()) {
@@ -72,11 +73,14 @@ struct LoginView: View {
                     }
                     .foregroundStyle(.purple)
                 }
+                
             }
             .padding(.horizontal, 30)
             .padding(.top, 20)
+            
         }
         .tint(.purple)
+        
     }
 }
 
