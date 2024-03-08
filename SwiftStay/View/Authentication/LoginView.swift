@@ -13,7 +13,8 @@ struct LoginView: View {
     @State var password: String = ""
     
     var body: some View {
-        NavigationView {
+        
+        NavigationStack {
             
             VStack {
                 
@@ -42,7 +43,8 @@ struct LoginView: View {
                 
                 
                 // FORGOT PASSWORD BUTTON
-                NavigationLink(destination: Text("We're still working on it...")) {
+                NavigationLink(value: "forgot-password") {
+                    
                     HStack {
                         
                         Spacer()
@@ -64,19 +66,37 @@ struct LoginView: View {
                 Spacer()
                 
                 
-                // SIGN UP REGISRTATION
-                NavigationLink(destination: RegistrationView()) {
-                    HStack {
-                        Text("Don't have an account?")
+                // SIGN UP REGISTRATION
+                HStack() {
+                    
+                    Text("Don't have an account?")
+                    
+                    NavigationLink(value: "signup") {
                         Text("Sign Up")
-                            .fontWeight(.bold)
+                            .foregroundStyle(.purple)
+                            .underline()
                     }
-                    .foregroundStyle(.purple)
+                    
                 }
+                .fontWeight(.bold)
                 
             }
             .padding(.horizontal, 30)
             .padding(.top, 20)
+            .navigationDestination(for: String.self, destination: { string in
+                
+                if string == "signup" {
+                    
+                    RegistrationView()
+                    
+                } else {
+                    
+                    Text("We're still working on it...")
+                        .bold()
+                    
+                }
+                
+            })
             
         }
         .tint(.purple)

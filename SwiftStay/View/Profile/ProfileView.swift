@@ -32,7 +32,7 @@ struct ProfileView: View {
                 AuthenticationButton(buttonTitle: "Sign In")
                 
                 
-                // SIGN UP
+                // SIGN UP REGISTRATION
                 HStack() {
                     Text("Don't have an account?")
                     
@@ -84,7 +84,7 @@ struct ProfileView: View {
                     
                 } else {
                     
-                    Text("Still working on it...")
+                    Text("We're still working on it...")
                         .bold()
                     
                 }
