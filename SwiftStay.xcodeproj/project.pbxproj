@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F11BCF132B97ECD0006075E6 /* SwiftStayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF122B97ECD0006075E6 /* SwiftStayApp.swift */; };
-		F11BCF152B97ECD0006075E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF142B97ECD0006075E6 /* ContentView.swift */; };
+		F11BCF152B97ECD0006075E6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF142B97ECD0006075E6 /* HomeView.swift */; };
 		F11BCF172B97ECD1006075E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11BCF162B97ECD1006075E6 /* Assets.xcassets */; };
 		F11BCF1A2B97ECD1006075E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F11BCF192B97ECD1006075E6 /* Preview Assets.xcassets */; };
 		F11BCF272B97EF11006075E6 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF262B97EF11006075E6 /* ExploreView.swift */; };
@@ -17,6 +17,7 @@
 		F11BCF2D2B97F6C8006075E6 /* ExploreDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11BCF2C2B97F6C8006075E6 /* ExploreDetailsView.swift */; };
 		F11FD1822B9A7DD100AEAACB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11FD1812B9A7DD100AEAACB /* LoginView.swift */; };
 		F11FD1842B9A7DF900AEAACB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11FD1832B9A7DF900AEAACB /* CustomTextField.swift */; };
+		F11FD1862B9AFF6100AEAACB /* CollapsedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11FD1852B9AFF6100AEAACB /* CollapsedPickerView.swift */; };
 		F1557AF42B9859E000042257 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1557AF32B9859E000042257 /* ImageCarouselView.swift */; };
 		F1557AF62B98705900042257 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1557AF52B98705900042257 /* DestinationSearchView.swift */; };
 		F1CBE0DB2B99C820000B1275 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0DA2B99C820000B1275 /* ProfileView.swift */; };
@@ -32,7 +33,7 @@
 /* Begin PBXFileReference section */
 		F11BCF0F2B97ECD0006075E6 /* SwiftStay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11BCF122B97ECD0006075E6 /* SwiftStayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStayApp.swift; sourceTree = "<group>"; };
-		F11BCF142B97ECD0006075E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F11BCF142B97ECD0006075E6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F11BCF162B97ECD1006075E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F11BCF192B97ECD1006075E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F11BCF262B97EF11006075E6 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		F11BCF2C2B97F6C8006075E6 /* ExploreDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDetailsView.swift; sourceTree = "<group>"; };
 		F11FD1812B9A7DD100AEAACB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F11FD1832B9A7DF900AEAACB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		F11FD1852B9AFF6100AEAACB /* CollapsedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedPickerView.swift; sourceTree = "<group>"; };
 		F1557AF32B9859E000042257 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 		F1557AF52B98705900042257 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 		F1CBE0DA2B99C820000B1275 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -83,13 +85,12 @@
 		F11BCF112B97ECD0006075E6 /* SwiftStay */ = {
 			isa = PBXGroup;
 			children = (
-				F1CBE0E92B9A12EC000B1275 /* Service */,
-				F11BCF2E2B97F6EC006075E6 /* Components */,
+				F11BCF122B97ECD0006075E6 /* SwiftStayApp.swift */,
 				F11BCF242B97EEE2006075E6 /* View */,
 				F11BCF222B97EECF006075E6 /* Model */,
 				F11BCF232B97EED7006075E6 /* ViewModel */,
-				F11BCF122B97ECD0006075E6 /* SwiftStayApp.swift */,
-				F11BCF142B97ECD0006075E6 /* ContentView.swift */,
+				F11BCF2E2B97F6EC006075E6 /* Components */,
+				F1CBE0E92B9A12EC000B1275 /* Service */,
 				F11BCF162B97ECD1006075E6 /* Assets.xcassets */,
 				F11BCF182B97ECD1006075E6 /* Preview Content */,
 			);
@@ -124,6 +125,7 @@
 		F11BCF242B97EEE2006075E6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F11BCF142B97ECD0006075E6 /* HomeView.swift */,
 				F11FD1802B9A7DBA00AEAACB /* Authentication */,
 				F11BCF252B97EEF5006075E6 /* Explore */,
 				F1CBE0DE2B99CB5F000B1275 /* WishLists */,
@@ -150,6 +152,7 @@
 				F1557AF32B9859E000042257 /* ImageCarouselView.swift */,
 				F1CBE0E12B99CC3F000B1275 /* SignInButton.swift */,
 				F11FD1832B9A7DF900AEAACB /* CustomTextField.swift */,
+				F11FD1852B9AFF6100AEAACB /* CollapsedPickerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -257,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F11BCF152B97ECD0006075E6 /* ContentView.swift in Sources */,
+				F11BCF152B97ECD0006075E6 /* HomeView.swift in Sources */,
 				F1CBE0DB2B99C820000B1275 /* ProfileView.swift in Sources */,
 				F1CBE0DD2B99C9F7000B1275 /* ProfileOptionRowView.swift in Sources */,
 				F1557AF62B98705900042257 /* DestinationSearchView.swift in Sources */,
@@ -266,6 +269,7 @@
 				F1CBE0E82B9A1277000B1275 /* ExploreViewModel.swift in Sources */,
 				F1CBE0E22B99CC3F000B1275 /* SignInButton.swift in Sources */,
 				F11FD1842B9A7DF900AEAACB /* CustomTextField.swift in Sources */,
+				F11FD1862B9AFF6100AEAACB /* CollapsedPickerView.swift in Sources */,
 				F11BCF272B97EF11006075E6 /* ExploreView.swift in Sources */,
 				F1CBE0E02B99CB79000B1275 /* WishListsView.swift in Sources */,
 				F11FD1822B9A7DD100AEAACB /* LoginView.swift in Sources */,

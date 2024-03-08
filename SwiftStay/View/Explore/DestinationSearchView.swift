@@ -18,7 +18,8 @@ enum DestinationSearchOption {
 struct DestinationSearchView: View {
     
     @Binding var show: Bool
-    @State private var destination: String = ""
+    @ObservedObject var viewModel: ExploreViewModel
+    
     @State private var selectedOption: DestinationSearchOption = .destination
     @State private var startDate = Date()
     @State private var endDate = Date()
@@ -42,9 +43,10 @@ struct DestinationSearchView: View {
                 Spacer()
                 
                 // CLEAR BUTTON
-                if !destination.isEmpty {
+                if !viewModel.searchLocation.isEmpty {
                     Button("Clear") {
-                        destination = ""
+                        viewModel.searchLocation = ""
+                        viewModel.filterRentalsByLocation()
                     }
                     .foregroundStyle(.black)
                     .font(.subheadline)
@@ -64,9 +66,12 @@ struct DestinationSearchView: View {
                         Image(systemName: "magnifyingglass")
                             .imageScale(.small)
                         
-                        TextField("Search destinations", text: $destination)
+                        TextField("Search destinations", text: $viewModel.searchLocation)
                             .font(.subheadline)
-                            .foregroundStyle(.gray)
+                            .onSubmit {
+                                viewModel.filterRentalsByLocation()
+                                show.toggle()
+                            }
                     }
                     .frame(height: 44)
                     .padding(.horizontal)
@@ -164,7 +169,7 @@ struct DestinationSearchView: View {
 }
 
 #Preview {
-    DestinationSearchView(show: .constant(false))
+    DestinationSearchView(show: .constant(false), viewModel: ExploreViewModel(service: ExploreService()))
 }
 
 struct CollapsableViewModifier: ViewModifier {
@@ -177,26 +182,4 @@ struct CollapsableViewModifier: ViewModifier {
     }
 }
 
-struct CollapsedPickerView: View {
-    
-    var title: String
-    var description: String
-    
-    var body: some View {
-        VStack(alignment: .leading) {
-            
-            HStack() {
-                Text(title)
-                    .foregroundStyle(.gray)
-                
-                Spacer()
-                
-                Text(description)
-            }
-            .fontWeight(.semibold)
-            .font(.subheadline)
-            
-        }
-        
-    }
-}
+

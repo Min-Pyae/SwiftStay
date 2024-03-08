@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         TabView {
             
@@ -24,7 +24,7 @@ struct ContentView: View {
                     Label("Explore", systemImage: "heart.fill")
                 }
             
-            
+            // PROFILE VIEW
             ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.circle.fill")
@@ -34,5 +34,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    HomeView()
 }

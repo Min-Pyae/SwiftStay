@@ -16,10 +16,10 @@ struct ExploreView: View {
         NavigationStack {
             VStack {
                 if showDestinationSearchView {
-                    DestinationSearchView(show: $showDestinationSearchView)
+                    DestinationSearchView(show: $showDestinationSearchView, viewModel: viewModel)
                 } else {
                     // SEARCH AND FILTER BAR
-                    SearchAndFilterBar()
+                    SearchAndFilterBar(location: viewModel.searchLocation)
                         .onTapGesture {
                             withAnimation(.snappy) {
                                 showDestinationSearchView.toggle()
