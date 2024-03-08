@@ -36,7 +36,7 @@ struct ExploreItemView: View {
                     
                     // PRICE
                     HStack {
-                        Text("$\(rental.pricePerNight)")
+                        Text("$\(String(format: "%.2f", rental.pricePerNight))")
                         Text("night")
                     }
                     .foregroundStyle(.black)
@@ -49,7 +49,7 @@ struct ExploreItemView: View {
                 HStack(spacing: 5) {
                     Image(systemName: "star.fill")
                     
-                    Text("\(rental.rating)")
+                    Text("\(String(format: "%.1f", rental.rating))")
                 }
                 .foregroundStyle(.black)
             }

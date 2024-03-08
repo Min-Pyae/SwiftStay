@@ -25,7 +25,7 @@ struct ProfileView: View {
                 
                 
                 // LOG IN BUTTON
-                LogInButton()
+                SignInButton()
                 
                 
                 // SIGN UP
@@ -57,6 +57,7 @@ struct ProfileView: View {
         }
         .padding()
     }
+    
 }
 
 #Preview {

@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct LogInButton: View {
+struct SignInButton: View {
     var body: some View {
         Button(action: {
             
         }, label: {
-            Text("Log In")
+            Text("Sign In")
                 .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundStyle(.white)
@@ -24,5 +24,5 @@ struct LogInButton: View {
 }
 
 #Preview {
-    LogInButton()
+    SignInButton()
 }

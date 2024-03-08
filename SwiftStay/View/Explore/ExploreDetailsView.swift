@@ -48,7 +48,8 @@ struct ExploreDetailsView: View {
                                 .fill(.white)
                                 .frame(width: 32, height: 32)
                         )
-                        .padding(35)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 55)
                 })
             }
             
@@ -62,7 +63,7 @@ struct ExploreDetailsView: View {
                 HStack() {
                     Image(systemName: "star.fill")
                     
-                    Text("\(rental.rating)")
+                    Text("\(String(format: "%.1f", rental.rating))")
                     
                     Text(" - ")
                     
@@ -204,7 +205,7 @@ struct ExploreDetailsView: View {
                 HStack {
                     
                     VStack(alignment: .leading) {
-                        Text("$\(rental.pricePerNight)")
+                        Text("$\(String(format: "%.2f", rental.pricePerNight))")
                             .font(.subheadline)
                             .fontWeight(.semibold)
                         
