@@ -26,7 +26,7 @@ struct ExploreItemView: View {
                 // DETAILS
                 VStack(alignment: .leading) {
                     Text("\(rental.city), \(rental.state)")
-                        .foregroundStyle(Color("ExploreItemViewText"))
+                        .foregroundStyle(.exploreItemViewText)
                         .fontWeight(.bold)
                     
                     Text("12 mi away")
@@ -40,7 +40,7 @@ struct ExploreItemView: View {
                         Text("$\(String(format: "%.2f", rental.pricePerNight))")
                         Text("night")
                     }
-                    .foregroundStyle(Color("ExploreItemViewText"))
+                    .foregroundStyle(.exploreItemViewText)
                     
                 }
                 .fontWeight(.semibold)

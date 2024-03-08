@@ -17,10 +17,10 @@ struct DismissButton: View {
             dismiss()
         }, label: {
             Image(systemName: "chevron.left")
-                .foregroundStyle(.black)
+                .foregroundStyle(.foreground)
                 .background(
                     Circle()
-                        .fill(.white)
+                        .fill(.dismissButtonBackground)
                         .frame(width: 32, height: 32)
                 )
                 .padding(.horizontal, 30)

@@ -101,9 +101,11 @@ struct ExploreDetailsView: View {
                 
                 Spacer()
                 
-                Image(systemName: "person.circle.fill")
+                Image(rental.ownerimageUrl)
                     .resizable()
-                    .frame(width: 60, height: 60)
+                    .scaledToFill()
+                    .frame(width: 64, height: 64)
+                    .clipShape(Circle())
                 
             }
             .padding()
@@ -236,7 +238,7 @@ struct ExploreDetailsView: View {
                 }
                 .padding(.horizontal, 30)
             }
-            .background(Color("ReserveBackground"))
+            .backgroundStyle(.reserveBackground)
         }
         
     }
