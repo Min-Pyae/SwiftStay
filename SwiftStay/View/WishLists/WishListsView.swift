@@ -26,7 +26,7 @@ struct WishListsView: View {
                 .padding()
                 
                 // LOG IN BUTTON
-                SignInButton()
+                AuthenticationButton(buttonTitle: "Sign In")
                 
                 Spacer()
             }

@@ -17,6 +17,8 @@ struct LoginView: View {
             
             VStack {
                 
+                //DismissButton()
+                
                 VStack (alignment: .leading, spacing: 20) {
                     
                     // WELCOME TEXTS
@@ -24,7 +26,7 @@ struct LoginView: View {
                         .font(.largeTitle)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     
-                    Text("Welcome to SwiftStay")
+                    Text("Welcome to SwiftStay!")
                         .font(.title)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .foregroundStyle(Color(.purple))
@@ -41,12 +43,13 @@ struct LoginView: View {
                 }
                 
                 // FORGOT PASSWORD BUTTON
-                NavigationLink(destination: Text("Hello")) {
+                NavigationLink(destination: Text("We're still working on it...")) {
                     HStack {
                         
                         Spacer()
                         
                         Text("Forgot Password?")
+                            .foregroundStyle(.purple)
                             .font(.subheadline)
                             .bold()
                         
@@ -56,22 +59,24 @@ struct LoginView: View {
                 
                 
                 // SIGN IN BUTTON
-                SignInButton()
+               // AuthenticationButton(buttonTitle: "Sign In")
                 
                 Spacer()
                 
                 // SIGN UP REGISRTATION
-                NavigationLink(destination: Text("Still working on it...")) {
+                NavigationLink(destination: RegistrationView()) {
                     HStack {
                         Text("Don't have an account?")
                         Text("Sign Up")
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.bold)
                     }
+                    .foregroundStyle(.purple)
                 }
             }
             .padding(.horizontal, 30)
             .padding(.top, 20)
         }
+        .tint(.purple)
     }
 }
 

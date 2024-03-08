@@ -10,8 +10,8 @@ import MapKit
 
 struct ExploreDetailsView: View {
     
-    @Environment(\.dismiss) var dismiss
     @State private var position: MapCameraPosition
+    
     let rental: Rental
     
     init(rental: Rental) {
@@ -38,19 +38,7 @@ struct ExploreDetailsView: View {
                 ImageCarouselView(rental: rental)
                     .frame(height: 400)
                 
-                Button(action: {
-                    dismiss()
-                }, label: {
-                    Image(systemName: "chevron.left")
-                        .foregroundStyle(.black)
-                        .background(
-                            Circle()
-                                .fill(.white)
-                                .frame(width: 32, height: 32)
-                        )
-                        .padding(.horizontal, 30)
-                        .padding(.vertical, 55)
-                })
+                DismissButton()
             }
             
             
@@ -236,7 +224,7 @@ struct ExploreDetailsView: View {
                 }
                 .padding(.horizontal, 30)
             }
-            .background(Color(.white))
+            .background(Color("ReserveBackground"))
         }
     }
 }

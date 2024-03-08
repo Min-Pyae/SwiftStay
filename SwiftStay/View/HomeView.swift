@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
+        
         TabView {
             
             // EXPLORE VIEW
@@ -30,6 +31,7 @@ struct HomeView: View {
                     Label("Profile", systemImage: "person.circle.fill")
                 }
         }
+        .tint(.purple)
     }
 }
 

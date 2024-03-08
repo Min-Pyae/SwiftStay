@@ -48,7 +48,7 @@ struct DestinationSearchView: View {
                         viewModel.searchLocation = ""
                         viewModel.filterRentalsByLocation()
                     }
-                    .foregroundStyle(.black)
+                    .foregroundStyle(Color("ClearButton"))
                     .font(.subheadline)
                     .fontWeight(.semibold)
                 }
@@ -176,7 +176,7 @@ struct CollapsableViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .background(.white)
+            .background(Color("CollapsedPickerBackground"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .shadow(radius: 10)
     }

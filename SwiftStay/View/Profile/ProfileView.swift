@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State private var isNavigationActive = false
+    
     var body: some View {
         
-        VStack {
+        NavigationStack {
             
             // PROFILE LOG IN VIEW
             VStack(alignment: .leading, spacing: 32) {
@@ -25,36 +28,67 @@ struct ProfileView: View {
                 
                 
                 // LOG IN BUTTON
-                SignInButton()
+                AuthenticationButton(buttonTitle: "Sign In")
                 
                 
                 // SIGN UP
                 HStack() {
                     Text("Don't have an account?")
                     
-                    Text("Sign Up")
-                        .fontWeight(.bold)
-                        .underline()
+                    NavigationLink(value: "signup") {
+                        Text("Sign Up")
+                            .foregroundStyle(.purple)
+                            .fontWeight(.bold)
+                            .underline()
+                    }
+                    
                 }
                 .font(.caption)
                 
             }
             
+            Spacer()
             
             // PROFILE OPTIONS
             VStack(spacing: 24) {
                 
                 // SETTINGS
-                ProfileOptionRowView(imageName: "gear", title: "Settings")
+                NavigationLink(value: "settings") {
+                    ProfileOptionRowView(imageName: "gear", title: "Settings")
+                }
                 
                 // ACCESSIBILITY
-                ProfileOptionRowView(imageName: "gear", title: "Accessibility")
+                NavigationLink(value: "accessibility") {
+                    ProfileOptionRowView(imageName: "accessibility", title: "Accessibility")
+                }
                 
                 // HELP CENTER
-                ProfileOptionRowView(imageName: "questionmark.circle", title: "Visit the help center")
+                NavigationLink(value: "help") {
+                    ProfileOptionRowView(imageName: "questionmark.circle", title: "Visit the help center")
+                }
             }
-            .padding()
+            .padding(.bottom)
+            .tint(.primary)
+            .navigationDestination(for: String.self, destination: { string in
+                
+                if string == "signup" {
+                    
+                    RegistrationView()
+                    
+                } else if string == "signin" {
+                    
+                    LoginView()
+                    
+                } else {
+                    
+                    Text("Still working on it...")
+                        .bold()
+                    
+                }
+                
+            })
         }
+        .tint(.purple)
         .padding()
     }
     

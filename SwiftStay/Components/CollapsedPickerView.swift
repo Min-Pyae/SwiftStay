@@ -13,6 +13,7 @@ struct CollapsedPickerView: View {
     var description: String
     
     var body: some View {
+        
         VStack(alignment: .leading) {
             
             HStack() {

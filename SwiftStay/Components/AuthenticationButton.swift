@@ -7,12 +7,17 @@
 
 import SwiftUI
 
-struct SignInButton: View {
+struct AuthenticationButton: View {
+    
+    var buttonTitle: String
+    @State var isNavigationActive: Bool = false
+    
     var body: some View {
+        
         Button(action: {
-            
+            isNavigationActive = true
         }, label: {
-            Text("Sign In")
+            Text(buttonTitle)
                 .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundStyle(.white)
@@ -20,9 +25,13 @@ struct SignInButton: View {
                 .background(.purple)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
         })
+        .sheet(isPresented: $isNavigationActive, content: {
+            LoginView()
+        })
+        
     }
 }
 
 #Preview {
-    SignInButton()
+    AuthenticationButton(buttonTitle: "Sign In")
 }
