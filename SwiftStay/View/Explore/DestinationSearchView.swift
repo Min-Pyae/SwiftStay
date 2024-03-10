@@ -173,18 +173,6 @@ struct DestinationSearchView: View {
 }
 
 
-// COLLAPSABLE VIEW MODIFIER
-struct CollapsableViewModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding()
-            .background(.collapsedPickerBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .shadow(radius: 10)
-    }
-}
-
-
 #Preview {
     DestinationSearchView(show: .constant(false), viewModel: ExploreViewModel(service: ExploreService()))
 }

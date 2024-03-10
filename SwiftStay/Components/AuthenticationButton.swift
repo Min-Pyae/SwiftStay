@@ -18,12 +18,7 @@ struct AuthenticationButton: View {
             isNavigationActive = true
         }, label: {
             Text(buttonTitle)
-                .font(.subheadline)
-                .fontWeight(.bold)
-                .foregroundStyle(.white)
-                .frame(width: 360, height: 48)
-                .background(.purple)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .modifier(AuthenticationButtonTextModifier())
         })
         .sheet(isPresented: $isNavigationActive, content: {
             LoginView()

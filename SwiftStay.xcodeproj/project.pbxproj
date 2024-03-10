@@ -20,6 +20,8 @@
 		F11FD1862B9AFF6100AEAACB /* CollapsedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11FD1852B9AFF6100AEAACB /* CollapsedPickerView.swift */; };
 		F1557AF42B9859E000042257 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1557AF32B9859E000042257 /* ImageCarouselView.swift */; };
 		F1557AF62B98705900042257 /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1557AF52B98705900042257 /* DestinationSearchView.swift */; };
+		F1677F8A2B9D32640049A1A9 /* CollapsableViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1677F892B9D32640049A1A9 /* CollapsableViewModifier.swift */; };
+		F1677F8C2B9D32C30049A1A9 /* AuthenticationButtonTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1677F8B2B9D32C30049A1A9 /* AuthenticationButtonTextModifier.swift */; };
 		F1CBE0DB2B99C820000B1275 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0DA2B99C820000B1275 /* ProfileView.swift */; };
 		F1CBE0DD2B99C9F7000B1275 /* ProfileOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0DC2B99C9F7000B1275 /* ProfileOptionRowView.swift */; };
 		F1CBE0E02B99CB79000B1275 /* WishListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CBE0DF2B99CB79000B1275 /* WishListsView.swift */; };
@@ -47,6 +49,8 @@
 		F11FD1852B9AFF6100AEAACB /* CollapsedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedPickerView.swift; sourceTree = "<group>"; };
 		F1557AF32B9859E000042257 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 		F1557AF52B98705900042257 /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
+		F1677F892B9D32640049A1A9 /* CollapsableViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsableViewModifier.swift; sourceTree = "<group>"; };
+		F1677F8B2B9D32C30049A1A9 /* AuthenticationButtonTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationButtonTextModifier.swift; sourceTree = "<group>"; };
 		F1CBE0DA2B99C820000B1275 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		F1CBE0DC2B99C9F7000B1275 /* ProfileOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionRowView.swift; sourceTree = "<group>"; };
 		F1CBE0DF2B99CB79000B1275 /* WishListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListsView.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				F11FD1832B9A7DF900AEAACB /* CustomTextField.swift */,
 				F11FD1852B9AFF6100AEAACB /* CollapsedPickerView.swift */,
 				F1E9EE172B9B2CC2008CEA10 /* DismissButton.swift */,
+				F1677F892B9D32640049A1A9 /* CollapsableViewModifier.swift */,
+				F1677F8B2B9D32C30049A1A9 /* AuthenticationButtonTextModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -268,6 +274,7 @@
 			files = (
 				F1E9EE182B9B2CC2008CEA10 /* DismissButton.swift in Sources */,
 				F11BCF152B97ECD0006075E6 /* HomeView.swift in Sources */,
+				F1677F8C2B9D32C30049A1A9 /* AuthenticationButtonTextModifier.swift in Sources */,
 				F1CBE0DB2B99C820000B1275 /* ProfileView.swift in Sources */,
 				F1E9EE1A2B9B2F09008CEA10 /* RegistrationView.swift in Sources */,
 				F1CBE0DD2B99C9F7000B1275 /* ProfileOptionRowView.swift in Sources */,
@@ -280,6 +287,7 @@
 				F11FD1862B9AFF6100AEAACB /* CollapsedPickerView.swift in Sources */,
 				F11BCF272B97EF11006075E6 /* ExploreView.swift in Sources */,
 				F1CBE0E02B99CB79000B1275 /* WishListsView.swift in Sources */,
+				F1677F8A2B9D32640049A1A9 /* CollapsableViewModifier.swift in Sources */,
 				F11FD1822B9A7DD100AEAACB /* LoginView.swift in Sources */,
 				F11BCF2D2B97F6C8006075E6 /* ExploreDetailsView.swift in Sources */,
 				F11BCF2B2B97F2C5006075E6 /* SearchAndFilterBar.swift in Sources */,

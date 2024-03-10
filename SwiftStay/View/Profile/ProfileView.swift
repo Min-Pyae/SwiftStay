@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @State private var isNavigationActive = false
-    
     var body: some View {
         
         NavigationStack {

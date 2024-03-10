@@ -47,7 +47,12 @@ struct RegistrationView: View {
             }
             
             // SIGN IN BUTTON
-            AuthenticationButton(buttonTitle: "Sign Up")
+            Button(action: {
+                
+            }, label: {
+                Text("Sign Up")
+                    .modifier(AuthenticationButtonTextModifier())
+            })
             
             Spacer()
             

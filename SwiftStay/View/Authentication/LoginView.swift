@@ -60,7 +60,12 @@ struct LoginView: View {
                 
                 
                 // SIGN IN BUTTON
-                AuthenticationButton(buttonTitle: "Sign In")
+                Button(action: {
+                    
+                }, label: {
+                    Text("Sign In")
+                        .modifier(AuthenticationButtonTextModifier())
+                })
                 
                 
                 Spacer()
